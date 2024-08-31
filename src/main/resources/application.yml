@@ -1,0 +1,34 @@
+server:
+  port: 3000
+
+
+#hibernate:
+#  connection:
+#    url: jdbc:mysql://localhost:3306/testproject?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8
+#    username: root
+#    password: Aa0909263940!
+#  show_sql: true
+#  format_sql: ture
+#  highlight_sql: true
+#  hbm2ddl: auto
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/testproject?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8
+    password: Aa0909263940!
+
+  sql:
+    init:
+      mode: always
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#  jpa:
+#    properties:
+#      hibernate:
+#        hbm2ddl:
+#            auto: create
+#    database-platform: org.hibernate.dialect.H2Dialect
